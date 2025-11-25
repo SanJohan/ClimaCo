@@ -1,6 +1,6 @@
 .search-form {
   max-width: 1000px;
-  margin: 0 auto 2rem;
+  margin: 0 2rem;
   display: flex;
   align-items: center;
   padding: 0 1.5rem;
@@ -43,4 +43,11 @@
 
 .search-input::placeholder {
   color: #9393c8;
+}
+
+
+.search-bar span:last-child {
+  width: 24px;   
+  text-align: center;
+  cursor: pointer;
 }
