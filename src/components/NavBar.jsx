@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "../styles/NavBar.css";
+import CitySearchSaver from "./CitySearchSaver.jsx";
 
 function NavBar() {
   return (
@@ -34,6 +35,7 @@ function NavBar() {
           <Link to="/">ClimaCo</Link>
         </div>
         <div className="navbar-links">
+          <CitySearchSaver />
           <Link to="/" className="nav-link">
             Home
           </Link>
