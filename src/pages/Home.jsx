@@ -10,7 +10,7 @@ import "../styles/Home.css";
 const API_KEY = "30534b61db087f946044d5f1232b3e47";
 
 function Home() {
-  const [city] = useLocalStorage("city");
+  const [city] = useLocalStorage("city", "Bogota");
   const [capitals, setCapitals] = useLocalStorage("capitals", null);
 
   const [cities, setCities] = useState([]);
@@ -59,21 +59,19 @@ function Home() {
 
   return (
     <>
-      <CitySearchSaver />
+      <h1>Tu busqueda actual</h1>
+
       {loading && <p>Loading...</p>}
       {error && <p>{error.message}</p>}
 
       {data && (
         <div>
-          <h2>{data.name}</h2>
-          <p>{data.main.temp} °C</p>
-          <p>{data.weather[0].description}</p>
-          <img
-            alt="clima"
-            src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
-          />
+          <CityCard city={data} />
         </div>
       )}
+
+      <h1>Ciudades recomendadas</h1>
+      <p>Una vista general de las ciudades mas populares en Colombia</p>
 
       <main className="home-grid">
         {cities.length > 0 &&
