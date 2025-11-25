@@ -1,7 +1,15 @@
 import { useEffect, useState } from "react";
 
 function useLocalStorage(key, initialValue) {
-  const saved = JSON.parse(localStorage.getItem(key));
+  let saved;
+
+  try {
+    saved = JSON.parse(localStorage.getItem(key));
+  } catch (e) {
+    console.warn(`Invalid JSON in localStorage key "${key}", resetting...`);
+    console.error(e);
+    saved = initialValue;
+  }
 
   const [value, setValue] = useState(saved ?? initialValue);
 
