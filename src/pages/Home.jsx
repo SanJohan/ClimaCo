@@ -1,6 +1,5 @@
 import CitySearchSaver from "../components/CitySearchSaver";
 import useLocalStorage from "../hooks/useLocalStorage.jsx";
-import useFetch from "../hooks/useFetch";
 import citiesCap from "../data/cities.json";
 import { useEffect, useState } from "react";
 import CityCard from "../components/CityCard";
@@ -10,15 +9,15 @@ import "../styles/Home.css";
 const API_KEY = "30534b61db087f946044d5f1232b3e47";
 
 function Home() {
-  const [city] = useLocalStorage("city", "Bogota");
+  // const [city] = useLocalStorage("city", "Bogota");
   const [capitals, setCapitals] = useLocalStorage("capitals", null);
 
   const [cities, setCities] = useState([]);
   const CAPITALS = citiesCap.capitals;
 
-  const { data, loading, error } = useFetch(
-    `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
-  );
+  // const { data, loading, error } = useFetch(
+  //   `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
+  // );
 
   useEffect(() => {
     const fetchCapital = async () => {
@@ -59,17 +58,6 @@ function Home() {
 
   return (
     <>
-      <h1>Tu busqueda actual</h1>
-
-      {loading && <p>Loading...</p>}
-      {error && <p>{error.message}</p>}
-
-      {data && (
-        <div>
-          <CityCard city={data} />
-        </div>
-      )}
-
       <h1>Ciudades recomendadas</h1>
       <p>Una vista general de las ciudades mas populares en Colombia</p>
 
