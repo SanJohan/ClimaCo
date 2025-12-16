@@ -1,0 +1,60 @@
+.city-card-detail{
+  background: #1b1d23;
+  border-radius: 15px;
+  border: 1px solid #282a30;
+  padding: 1.5rem 1.8rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  transition: 0.2 ease;
+  cursor: pointer;
+}
+
+.city-card:hover {
+  transform: translateY(-3px)
+}
+
+.city-header h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.city-header .country {
+  color: #9ca3af;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.city-temp{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.city-temp h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.city-temp img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.city-description-weather {
+  text-align: left;
+}
+
+.city-description-weather .description-weather {
+  margin: 0;
+  color: #d1d5db;
+  font: 1.2em sans-serif;
+}
+
+.city-description-weather .minmax{
+  margin: 0.2rem 0 0 0;
+  font-size: 0.95rem;
+  color: #d1d5db;
+}
