@@ -12,7 +12,7 @@ function App() {
       <main className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/CityDetails" element={<CityDetails />} />
+          <Route path="/CityDetails/:city" element={<CityDetails />} />
         </Routes>
       </main>
     </>

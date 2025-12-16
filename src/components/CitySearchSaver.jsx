@@ -1,14 +1,20 @@
 import useLocalStorage from "../hooks/useLocalStorage.jsx";
 import { useState } from "react";
 import "../styles/city-search-saver.css";
+import { useNavigate } from "react-router-dom";
 
 function CitySearchSaver() {
   const [, setCity] = useLocalStorage("city", "Bogota");
   const [value, setValue] = useState("");
+  const navigate = useNavigate();
+
 
   const handleSearch = () => {
     console.log(value);
-    if (value.trim() !== "") setCity(value);
+    if (value.trim() !== ""){
+      setCity(value);
+      navigate(`/CityDetails/${value}`);
+    }
   };
 
   const cancelSearch = () => {
