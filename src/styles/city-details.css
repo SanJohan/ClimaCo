@@ -4,6 +4,11 @@
   color: white;
 }
 
+.date-title{
+  font-size: 1rem;
+  margin: 0.5rem 0 2rem 0;
+  color: #9ca3af;
+}
 
 .city-details-container {
   padding: 2rem 10%;
@@ -16,6 +21,7 @@
   border-radius: 16px;
   padding: 20px;
   color: #e5e7eb;
+  border: 1px solid #282a30;;
 }
 
 .forecast-days-container h2 {
@@ -66,7 +72,8 @@
   margin-top: 2rem;
   background: linear-gradient(180deg, #0f172a, #020617);
   border-radius: 16px;
-  padding: 20px
+  padding: 20px;
+  border: 1px solid #282a30;
 }
 
 .day-details h2 {

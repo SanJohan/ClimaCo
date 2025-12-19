@@ -1,3 +1,19 @@
+
+.home-title{
+  margin-top: 2rems;
+  margin-bottom: 2.5rem;
+}
+
+.home-title h1{
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.home-title p{
+  font-size: 1.2rem;
+  color: #a7a7a7;
+}
+
 .home-grid{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

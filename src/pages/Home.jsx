@@ -57,19 +57,22 @@ function Home() {
   }, [CAPITALS, capitals, setCapitals]);
 
   return (
-    <>
-      <h1>Ciudades recomendadas</h1>
-      <p>Una vista general de las ciudades mas populares en Colombia</p>
+    <main className="home-main">
+      <div className="home-title">
+        <h1>Recomended cities</h1>
+        <p>A general view of the most popular cities in Colombia</p>
+      </div>
+      
 
-      <main className="home-grid">
+      <div className="home-grid">
         {cities.length > 0 &&
           cities.map(
             (city) => (
               console.log(city), (<CityCard key={city.id} city={city} />)
             )
           )}
-      </main>
-    </>
+      </div>
+    </main>
   );
 }
 
